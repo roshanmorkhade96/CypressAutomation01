@@ -1,0 +1,33 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "loadrunner": "node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "headedtest": "node_modules\\.bin\\cypress run -- headed",
+    "chrometest": "node_modules\\.bin\\cypress run -- browser chrome",
+    "record": "npx cypress run --record --key ed2ad5c6-fb5a-40fb-b451-4f7dc71ef248",
+    "feature": "npx cypress  run --spec cypress/integration/examples/BDD/*.feature",
+    "reporter": "npx cypress run --record --key ffddb556-308b-45a8-a279-0e9afd346c80 --reporter mochawesome ",
+    "greencard": "npm run test -- --spec \"cypress/integration/GreenCard/*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "cypress": "^11.2.0"
+  },
+  "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress-iframe": "^1.0.1",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/Result.json"
+    }
+  }
+}
