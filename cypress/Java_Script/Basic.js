@@ -28,3 +28,5 @@ for (i=0; i<arraryNAme.length; i++){
 }
 console.log("result", result+singleCh);
 console.log("result", result+singleCh);
+console.log("result", result+singleCh);
+console.log("result", result+singleCh);
