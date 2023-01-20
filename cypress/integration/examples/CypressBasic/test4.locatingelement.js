@@ -1,5 +1,5 @@
 describe("this is my 4th suite",function(){
-    it("this is my 4th test",function(){
+ it("this is my 4th test",function(){
 cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
 cy.get(':nth-child(4) > .stepper-input > .increment').click();
 cy.get(':nth-child(4) > .product-action > button').click();

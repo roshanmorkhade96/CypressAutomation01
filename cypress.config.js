@@ -11,22 +11,25 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 module.exports = defineConfig({
+  
+  defaultCommandTimeout: 8000,
   e2e: {
+    
     setupNodeEvents,
-    //
+    
     //specPattern:'cypress/integration/javascript_basic/*.js'
-    //specPattern: 'cypress/integration/examples/BDD/*.feature'
-    specPattern: 'cypress/integration/examples/*.js'
+     specPattern: 'cypress/integration/examples/BDD/*.feature'
+    //specPattern: 'cypress/integration/examples/CypressBasic/*.js'
     //specPattern: 'cypress/integration/GreenCard/*.js'
  
-  },
+  }, 
   env: {
     url: 'https://rahulshettyacademy.com/angularpractice/'
 
   },
   projectId: 'o7z3no',
  // reporter: 'reporters/custom.js',
- "defaultCommandTimeout": 8000,
+
   "retries": {
     // Configure retry attempts for `cypress run`
     // Default is 0
@@ -34,7 +37,17 @@ module.exports = defineConfig({
     // Configure retry attempts for `cypress open`
     // Default is 0
     //"openMode": 0
-  }
+  },
+  "db": {
+    "userName": "Roshan1996",
+    "password": "Roshan@12345",
+    "server": "roshanmorkhade.database.windows.net",
+    "options": {
+        "database": "roshanmorkhade",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion" : true
+    }
+}
 
 })
 

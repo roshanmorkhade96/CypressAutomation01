@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
-import HomePage from'../page_object/homepage'
-import ProductPage from'../page_object/productpage'
+import HomePage from'../../page_object/homepage'
+import ProductPage from'../../page_object/productpage'
 describe('this is my first test',function(){
-    //// runs once before all tests present in block(all set up method)
+//<Hooks> runs once before all tests present in block(all set up method)
     before(function(){ 
 cy.fixture('example').then(function(data)
 {
@@ -39,7 +39,7 @@ const actualtext=$e1.text()
 var res=actualtext.split(" ")
 res=res[1].trim()
 sum=Number(sum)+Number(res)
-}).then(function(){
+}).then(function(){//resolve promises as above step are not javascript
     cy.log(sum)
 })
 cy.get("h3 strong").then(function(element){
@@ -51,7 +51,7 @@ cy.get("h3 strong").then(function(element){
 
 product.getCheckOutButton().click()
 cy.get('#country').type('India')
-cy.wait(6000);
+
 cy.get('.suggestions > ul > li > a').click()
 cy.get('.checkbox').click()
 cy.get('.ng-untouched > .btn').click()

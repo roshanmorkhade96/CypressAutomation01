@@ -33,6 +33,8 @@ cy.request("POST","https://rahulshettyacademy.com/client/auth/login",{userEmail:
 
 
 })
+import sqlServer from 'cypress-sql-server';
+sqlServer.loadDBCommands();
 
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

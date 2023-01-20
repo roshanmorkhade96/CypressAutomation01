@@ -22,6 +22,7 @@
   "devDependencies": {
     "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress-iframe": "^1.0.1",
+    "cypress-sql-server": "^1.0.0",
     "multiple-cucumber-html-reporter": "^3.0.1"
   },
   "cypress-cucumber-preprocessor": {
